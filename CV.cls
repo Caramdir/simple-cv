@@ -8,6 +8,10 @@
 \RequirePackage{titlesec}
 \RequirePackage{fancyhdr}
 \RequirePackage{xcolor}
+\RequirePackage{csquotes}
+\RequirePackage{url}
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
 
 % If you want to change page size, margins, etc., change the arguments for the
 % geometry package.
@@ -30,7 +34,8 @@
 \setlist[CV]{
     style=sameline,
     labelindent=0cm,    % Do not indent the label/date (it is already indented by \hang).
-    itemindent=2cm,     % Indent the actual text by this much.
+    itemindent=0cm,    
+    leftmargin=2.5cm,   % Indent the actual text by this much.
     font=\normalfont,   % Formatting applied to the label/date.
 }
 
@@ -58,8 +63,8 @@
 % space.
 \renewcommand\maketitle{%
     \hspace{-\hang}%                                   
-    {\large\scshape\MakeLowercase{\@author}}\par%   % Change this line to change the formating of the title.
-    \hspace{-\hang}\rule{\fullwidth}{0.4pt}%        % Put a line under the title.
+    {\Large\scshape\MakeLowercase{\@author}}\par%           % Change this line to change the formating of the title.
+    \vspace{-0.5em}\hspace{-\hang}\rule{\fullwidth}{0.4pt}% % Put a line under the title.
 }
 
 % The foot line (see the fancyhdr package)
@@ -83,3 +88,9 @@
         }
     }%
 }
+
+% Set URLs in roman font.
+\urlstyle{rm}
+
+% Define a command for e-mails
+\newcommand\email[1]{\href{mailto:#1}{\nolinkurl{#1}}} 
