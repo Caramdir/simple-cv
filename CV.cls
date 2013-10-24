@@ -3,6 +3,8 @@
 \LoadClassWithOptions{article}
 
 % Load various useful packages
+\RequirePackage[utf8]{inputenc}
+\RequirePackage[T1]{fontenc}
 \RequirePackage{microtype}
 \RequirePackage{enumitem}
 \RequirePackage{titlesec}
@@ -10,8 +12,6 @@
 \RequirePackage{xcolor}
 \RequirePackage{csquotes}
 \RequirePackage{url}
-\RequirePackage[utf8]{inputenc}
-\RequirePackage[T1]{fontenc}
 
 % If you want to change page size, margins, etc., change the arguments for the
 % geometry package.
